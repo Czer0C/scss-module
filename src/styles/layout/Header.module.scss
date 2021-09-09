@@ -1,3 +1,5 @@
+@use '../meta/variables';
+
 .header {
   font-size: 1.4rem;
   display: flex;
@@ -6,6 +8,12 @@
   height: 7rem;
   background-color: #fff;
   border-bottom: 1px solid var(--color-grey-light-2);
+
+  @media only screen and (max-width: variables.$bp-smallest) {
+    flex-wrap: wrap;
+    height: 10rem;
+    align-content: space-evenly;
+  }
 }
 
 .logo {
@@ -19,6 +27,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: variables.$bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
 
   .input {
     font-family: inherit;
