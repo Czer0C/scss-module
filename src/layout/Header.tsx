@@ -1,9 +1,14 @@
 import styles from "@styles/layout/Header.module.scss"
+import Image from "next/image"
 
 export default function Header() {
   return (
     <header className={styles.header}>
-      <img src='logo.png' alt='trillo logo' className={styles.logo} />
+      <Image
+      width={40}
+      height={40}
+      layout='fixed'
+      src='/logo.png' alt='trillo logo' className={styles.logo} />
       <form action='#' className={styles.search}>
         <input
           type='text'
@@ -31,7 +36,11 @@ export default function Header() {
           <span className={styles.notification}>13</span>
         </div>
         <div className={styles.avatar}>
-          <img src='hikari.png' alt='User Photo' className={styles.userPhoto} />
+          <Image src='/hikari.png'
+          width={40}
+          height={40}
+          layout='fixed'
+          alt='User Photo' className={styles.userPhoto} />
           <span>Hikari</span>
         </div>
       </nav>
