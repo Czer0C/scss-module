@@ -30,9 +30,9 @@ export default function Header() {
           </svg>
           <span className={styles.notification}>13</span>
         </div>
-        <div>
-          <img src='kanata.jpg' alt='User Photo' className={styles.userPhoto} />
-          <span>Kanata</span>
+        <div className={styles.avatar}>
+          <img src='hikari.png' alt='User Photo' className={styles.userPhoto} />
+          <span>Hikari</span>
         </div>
       </nav>
     </header>
